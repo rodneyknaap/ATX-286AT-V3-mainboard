@@ -1,5 +1,5 @@
-# ATX-286AT-V3-mainboard
-286 PC/AT CPLD ATX mainboard revision 3
+# ATX-286AT-V3-mainboard  
+## 286 PC/AT CPLD ATX mainboard revision 3  
 The project consists of a ATX mainboard and a SRAM module design, there are 2 modules used for XMS and 2 for EMS memory.
 SRAM chips can be added as a set to each low and high module which will result in 2MB of SRAM per set.
 
