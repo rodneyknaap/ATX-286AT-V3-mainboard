@@ -1,7 +1,7 @@
 # ATX-286AT-V3-mainboard  
 ## 286 PC/AT CPLD ATX mainboard revision 3  
 This project is Revision 3 of my open source 286 AT ATX PC mainboard design using CPLD technology.
-As with the first revision, the design is based on the original IBM 5170 design.
+As with the first revision, the design is based on the original IBM 5170 PC.
 
 The project consists of an ATX mainboard and a SRAM module design, there are 2 SRAM modules used for XMS and 2 for EMS memory.
 SRAM ICs can be added as a set to each low and high byte module which will result in 2MB of SRAM per set.
