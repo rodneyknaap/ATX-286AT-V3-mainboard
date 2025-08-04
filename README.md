@@ -52,7 +52,7 @@ The Address driver/decoder CPLD in addition contains DMA specific logic in order
 # Status of the project  
 Currently the project is fully prepared in the quartus CPLD programming, which have been uploaded here into this repository.  
 
-The PCB has been ordered from JLCPCB (3-8-2025)  
+The PCBs have been ordered from JLCPCB (3-8-2025)  
 
 ![A picture of JLCPCB Order view](JLCPCB_ORDER_REV3D.png)  
 
