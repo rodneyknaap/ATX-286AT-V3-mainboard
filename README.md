@@ -51,12 +51,14 @@ The Address driver/decoder CPLD in addition contains DMA specific logic in order
 
 # Status of the project  
 Currently the project is fully prepared in the quartus CPLD programming, which have been uploaded here into this repository.  
-The PCB designs are finished and the gerber files are uploaded here. I will be uploading the gerber projects into my JLCPCB account and I will be combining an order for several of my projects which I am currently working on. As soon as all projects are uploaded I will create an order for all the PCBs needed.  
+
+The PCB has been ordered from JLCPCB (3-8-2025)  
+
+![A picture of JLCPCB Order view](JLCPCB_ORDER_REV3D.png)  
+
 All schematics have been uploaded here in PDF format, which includes the mainboard as well as the quartus block design schematics. The BDF files and quartus archives are assigned with 000 initially because these are pre-testing versions.  
 
-The design is currently awaiting testing, debugging and further intensive development, which will be detailed here as soon as this work progresses. The initial goal will be getting a minimal system up and running, after which all the features will be added, retested and developed further.
-
-I will also look at featuring an 8 bit mode system ROM chip. This 1 megabit 8 bit ROM chip is also featured in the design and attached to the X-data bus. This single chip is intended to ultimately replace the two 16 bit mode ROMs which have the same combined 1 megabit capacity.
+Testing, debugging and further development will be detailed here after receiving the PCBs and parts. 
 
 Updates will follow here and in the VCF thread
 
