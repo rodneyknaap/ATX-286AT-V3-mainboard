@@ -79,6 +79,7 @@ Operation is very stable, I am first testing at 16MHz CPU clock to establish a b
 I will look into developing more things on the system like shadow copy, the EMS memory system and running the SRAM directly on the CPU data bus.
 
 Also I will experiment a lot more with system control to see if there is any efficiency to be gained from the 286 CPU now that the system is running on 25% faster SRAM memory.
+The results of this work largely depend on the logic speeds of the CPLDs for the system control logic. I will explore the possibilities for this further.
 
 So the stable base operation of this system is now fully established and confirmed in this build including all the integrated IO.
 I will upload the quartus projects in version "001" which is fully functional on my test system on 25-9-2025.
