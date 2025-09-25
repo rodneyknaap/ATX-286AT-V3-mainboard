@@ -66,9 +66,22 @@ The PCBs have been ordered from JLCPCB (3-8-2025)
 
 All schematics have been uploaded here in PDF format, which includes the mainboard as well as the quartus block design schematics. The BDF files and quartus archives are assigned with 000 initially because these are pre-testing versions.  
 
-Testing, debugging and further development will be detailed here after receiving the PCBs and parts. 
 
-Updates will follow here and in the VCF thread
+# Status update 25-9-2025  
+
+![A photo of the REV3D mainboard](REV3D_FUNCTIONAL_BOARD.jpg)  
+
+I have built the project and the initial testing and debugging has been successfully finalized.
+The system is currently operating on the memory bus and using a single 8 bit system ROM on the XD bus.
+
+Operation is very stable, I am first testing at 16MHz CPU clock to establish a base line known stable operation and later I will do more testing at higher clock speeds so I can recognize any differences.
+
+I will look into developing more things on the system like shadow copy, the EMS memory system and running the SRAM directly on the CPU data bus.
+
+Also I will experiment a lot more with system control to see if there is any efficiency to be gained from the 286 CPU now that the system is running on 25% faster SRAM memory.
+
+So the stable base operation of this system is now fully established and confirmed in this build including all the integrated IO.
+I will upload the quartus projects in version "001" which is fully functional on my test system on 25-9-2025.
 
 Kind regards,
 
