@@ -76,13 +76,20 @@ The system is currently operating on the memory bus and using a single 8 bit sys
 
 Operation is very stable, I am first testing at 16MHz CPU clock to establish a base line known stable operation and later I will do more testing at higher clock speeds so I can recognize any differences.
 
-I will look into developing more things on the system like shadow copy, the EMS memory system and running the SRAM directly on the CPU data bus.
-
-Also I will experiment a lot more with system control to see if there is any efficiency to be gained from the 286 CPU now that the system is running on 25% faster SRAM memory.
-The results of this work largely depend on the logic speeds of the CPLDs for the system control logic. I will explore the possibilities for this further.
-
 So the stable base operation of this system is now fully established and confirmed in this build including all the integrated IO.
-I will upload the quartus projects in version "001" which is fully functional on my test system on 25-9-2025.
+I will upload the quartus projects in version "001" which is fully functional on my test system on 25-9-2025. The 001 version is recommended to run at 16-18 MHz CPU clock speeds which are most stable in comparison.
+
+# Status update 28-9-2025 
+
+I have worked on shadow copy however this appears to interfere with memory decoding to operate correctly, so I have abandoned that for the time being especially since the existing ROM, being on the X-BUS will support accurate reading at much higher clock speeds of the CPU possibly even up to 25MHz. The EMS memory system and running the SRAM directly on the CPU data bus are still to be tested, debugged and developed, for example the direct attachment of the SRAMs to the CPU bus may possibly help the system to run even faster in the future.
+
+I have experimented with the system control logic and this work now has produced an initial 22.4MHz-only system controller project which I have uploaded here.
+This version is capable of fully booting with 1 wait state which results in 14949 writes per millisecond to the SRAMs using VIDSPEED.EXE.
+Previously 22.4 MHz ran at 2 wait states so it has now been reduced to one wait state and increased stability being able to boot and run more programs.
+I have developed the circuits based on what is able to operate more reliably with these CPLDs that are used in this project. The CPLDs may benefit from some cooling, I recommend using a 8cm fan and blowing air towards the chips especially in the area of the two 100 pin CPLDs which heat up more than the others.
+
+So I am not fully there yet to find completely stable 22.4MHz operation however development is getting closer to that level of efficient operation than ever before.
+I am seeing a level of stability now which I also experienced during different stages of the previous work on the REV1 system.
 
 Kind regards,
 
