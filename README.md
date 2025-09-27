@@ -81,11 +81,14 @@ I will upload the quartus projects in version "001" which is fully functional on
 
 # Status update 28-9-2025 
 
-I have worked on shadow copy however this appears to interfere with memory decoding to operate correctly, so I have abandoned that for the time being especially since the existing ROM, being on the X-BUS will support accurate reading at much higher clock speeds of the CPU possibly even up to 25MHz. The EMS memory system and running the SRAM directly on the CPU data bus are still to be tested, debugged and developed, for example the direct attachment of the SRAMs to the CPU bus may possibly help the system to run even faster in the future.
+I have worked on shadow copy however this appears to interfere with memory decoding to operate correctly, so I have abandoned that for the time being especially since the existing ROM, being on the X-BUS will support accurate reading at much higher clock speeds of the CPU possibly even up to 25MHz.  
+
+The EMS memory system and running the SRAM directly on the CPU data bus are still to be tested, debugged and developed, for example the direct attachment of the SRAMs to the CPU bus may possibly help the system to run even faster in the future.
 
 I have experimented with the system control logic and this work now has produced an initial 22.4MHz-only system controller project which I have uploaded here.
 This version is capable of fully booting with 1 wait state which results in 14949 writes per millisecond to the SRAMs using VIDSPEED.EXE.
-Previously 22.4 MHz ran at 2 wait states so it has now been reduced to one wait state and increased stability being able to boot and run more programs.
+Previously 22.4 MHz ran at 2 wait states so it has now been reduced to one wait state and increased stability being able to boot and run more programs.  
+
 I have developed the circuits based on what is able to operate more reliably with these CPLDs that are used in this project. The CPLDs may benefit from some cooling, I recommend using a 8cm fan and blowing air towards the chips especially in the area of the two 100 pin CPLDs which heat up more than the others.
 
 
