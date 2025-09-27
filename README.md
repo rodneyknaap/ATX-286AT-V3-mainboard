@@ -88,7 +88,10 @@ This version is capable of fully booting with 1 wait state which results in 1494
 Previously 22.4 MHz ran at 2 wait states so it has now been reduced to one wait state and increased stability being able to boot and run more programs.
 I have developed the circuits based on what is able to operate more reliably with these CPLDs that are used in this project. The CPLDs may benefit from some cooling, I recommend using a 8cm fan and blowing air towards the chips especially in the area of the two 100 pin CPLDs which heat up more than the others.
 
-So I am not fully there yet to find completely stable 22.4MHz operation however development is getting closer to that level of efficient operation than ever before.
+
+![A system benchmark test is now able to run](REV3D_BENCHMARK.jpg)  
+
+I am not fully there yet to find completely stable 22.4MHz operation however development is getting closer to that level of efficient operation than ever before.
 I am seeing a level of stability now which I also experienced during different stages of the previous work on the REV1 system.
 
 Kind regards,
