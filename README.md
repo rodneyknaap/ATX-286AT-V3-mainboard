@@ -94,8 +94,11 @@ I have developed the circuits based on what is able to operate more reliably wit
 
 ![A system benchmark test is now able to run](REV3D_BENCHMARK_22MHZ.jpg)  
 
-I am not fully there yet to find completely stable 22.4MHz operation however development is getting closer to that level of efficient operation than ever before.
-I am seeing a level of stability now which I also experienced during different stages of the previous work on the REV1 system.
+# Status update 29-9-2025
+
+After creating and testing several System controller CPLD design updates the system is running increasingly stable at 22.4 MHz. A Wolf3D demo has run for well over 30 minutes without freezing which constitutes another significant milestone of stability. The quartus designs for this very stable version have been uploaded with reference V003. The Address bus driver decoder CPLD used for testing is the PRELATCH version. This version latches all the CPU address lines before decoding from these, eliminating the need to BALE latch the address decoder outputs being used on other areas of the system. The 22.4 MHz version of the CPLD projects appears to have better functionality at 16MHz as well now though not entirely perfect. That's why in case 16MHz is used as the CPU clock frequency it's better to use the V001 project archive. The key difference between the versions is particularly the System controller CPLD which so far appears to be most stable at 22.4 MHz. Please note: a fan should be used to keep the CPLDs cooler which will make sure they stay within ideal timing performance. A 8 cm side panel fan in the PC case which is directed at the CPLDs is recommended. Fan speed need not be high as long as some airflow is directed at the CPLDs.
+
+Further stability testing is now being done with the V003 project set.
 
 Kind regards,
 
