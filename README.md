@@ -94,9 +94,25 @@ The CPLDs will benefit from some airflow cooling, especially the 100 pin devices
 
 ![A system benchmark test is now able to run](REV3D_BENCHMARK_22MHZ.jpg)  
 
-After creating and testing several System controller CPLD design updates the system is running increasingly stable at 22.4 MHz. A Wolf3D demo has run for hours without freezing which constitutes another significant milestone of stability. The quartus designs for this very stable version has been uploaded with reference V003. New project set archive files optimized per CPU clock speed or speed range are being tested and will be uploaded here in the future. Tests have also been stable at down to 7MHz CPU clock speed operation with the matching design files for that speed range. So a target clock speed is best used with the optimal set of design files created for that specific clock frequency. More details will follow shortly.
+# Latest status update 3-11-2025:
+22.4MHz operation has been further stabilized, now near 100% correct operation and maximum efficiency of the 286 CPU.
+- consistent INIT and POST at 22.4 MHz
+- windows 3.1 operates for long durations without graphics glitching
+- 3dbench benchmark now also without glitching and scoring 7.9 fps
+- extended periods of Wolf3D game demo testing completed without freezing or glitches
+- fast 16 bit SRAM access with zero wait state-alike speeds, 14646 writes per millisecond
+- fast VGA RAM access at slower clock speeds when CPU speed is higher, 10886 writes per millisecond to VGA RAM
+- some minor DOS character issues when scrolling text
+- checkit 3 HDD benchmark: 4271K/sec 7.7ms-1.6ms
+This is the most stable operation yet in the REV3D system at 22.4MHz CPU clock speed.
+The most recent CPLD programming archives are version V004, single clock CPLD archive is from 8 to 16MHz, dual clock archive contains the files for supporting 18-22.4 MHz CPU clock.
+The single clock system controller can operate at below 8MHz CPU clock, however it needs some patience to wait for the POST to complete and actual booting to commence.
+It is unclear what is causing these delays, possible the BIOS code.
+So just wait longer for the BIOS to continue to boot at below 8MHz clock speeds.
+The system operates best at 22.4MHz using the dual clock projects, or at 16MHz single non-dynamic clock speed.
 
-Zero wait state operation has been tested and confirmed working however it turned out that the VGA card is able to function with equal performance with the normal 16 bit fast memory cycle logic so zero wait state is recommended not to be enabled on fast VGA cards so the system control is able to remain more universal. At 22MHz with a Cirrus Logic VGA card the performance currently is rated at 7.9 fps. At 16MHz straight clock speed (without dynamic clock) the Cirrus Logic card is able to complete memory write cycles at the same efficiency and speed as the normal system RAM.
+When a more completely stable and glitch free experience is preferable instead of maximum performance, it is recommended to clock the system at 20MHz CPU clock (40MHz oscillator for FCLOCK)
+Otherwise around 22.4MHz will get the most out of the current V004 CPLD logic.
 
 Kind regards,
 
