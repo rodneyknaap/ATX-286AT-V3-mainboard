@@ -121,9 +121,12 @@ Operation of EMS has been debugged completely and now working.
 Please note: MR BIOS generic 286 BIOS is recommended.
 However dummy IO write operations to port EBh are present in the MR BIOS.
 These need to be replaced with dummy writes to port EDh so they don't interfere with the EMS system.
-EMS ports were chosen based on port usage in SCAMP EMS system.
-Port 8Eh: page register RAM index port
-Port 9Eh: any write to this port will enable the EMS system immediately so program it before doing that.
+Instructions below.
+
+EMS ports were chosen based on port usage in VLSI SCAMP EMS system for example.
+Port E8h: page register RAM index port
+Port E9h: any write to this port will enable the EMS system immediately so program it before doing that.
+Port EAh: page register RAM 1: stores mapping address for all 64 positions of 16KB RAM blocks in the CPU real mode memory map(below 1MB boundary).
 The EMS system is able to replace ANY 16 KB position of RAM below 1MB boundary.
 This is being masked out by the address bus driver to only be enabled between segments 00000h-90000h, D0000h and E0000h.
 EMS is designed not to operate outside of real mode memory which would defeat the purpose since we can use XMS anyway if not in real mode.
