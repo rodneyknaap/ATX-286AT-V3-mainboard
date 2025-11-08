@@ -116,40 +116,43 @@ Otherwise around 22.4MHz will get the most out of the current V004 CPLD logic.
 
 # Status update 8-11-2025:
 # Full RealDOOM supporting EMS system design established and operational at 22MHz
-The logic for supporting EMS memory according to drivers by sqpat, see the VCF thread, has been added to the quartus designs.
+The logic for supporting EMS memory according to drivers by sqpat, see the VCF thread, has been added to the quartus designs.  
 Operation of EMS has been debugged completely and now working.
 Please note: MR BIOS generic 286 BIOS is recommended.
 However dummy IO write operations to port EBh are present in the MR BIOS.
 These need to be replaced with dummy writes to port EDh so they don't interfere with the EMS system.
-Instructions below.
+Instructions below.  
 
-EMS ports were chosen based on port usage in VLSI SCAMP EMS system for example.
-Port E8h: page register RAM index port
-Port E9h: any write to this port will enable the EMS system immediately so program it before doing that.
-Port EAh: page register RAM 1: stores mapping address for all 64 positions of 16KB RAM blocks in the CPU real mode memory map(below 1MB boundary).
-The EMS system is able to replace ANY 16 KB position of RAM below 1MB boundary.
-This is being masked out by the address bus driver to only be enabled between segments 00000h-90000h, D0000h and E0000h.
+EMS ports were chosen based on port usage in VLSI SCAMP EMS system for example.  
+Port E8h: page register RAM index port - select a 16KB position within memory map to program with ports EAh and EBh.  
+Port E9h: any write to this port will enable the EMS system immediately so program it before doing that.  
+Port EAh: page register RAM 1: stores mapping address for all 64 positions of 16KB RAM blocks in the CPU real mode memory map(below 1MB boundary).  
+Port EBh: bit 7 = 1 => enable EMS page mapping for the referenced memory block location  
+The EMS system is able to replace ANY 16 KB position of RAM below 1MB boundary.  
+This is being masked out by the address bus driver to only be enabled between segments 00000h-90000h, D0000h and E0000h.  
 EMS is designed not to operate outside of real mode memory which would defeat the purpose since we can use XMS anyway if not in real mode.
 EMS system is fast 16 bit mode SRAM which is equally as fast as any of the SYSTEM SRAM memory.
 No delays are present in the EMS access, the address translations are continually running during all memory operations.
 Updating the page register RAMs is done only with IO writes.
-No reading because of OE function shortage in the CPLDs.
+No reading because of OE function shortage in the CPLDs.  
 So we don't have a specific page frame/window, the entire below 1MB memory map can be swapped freely.
-So be careful not to swap the lowest sections of conventional which will freeze the computer when the system area disappears.
+So be careful not to swap the lowest sections of conventional which will freeze the computer when the system area disappears.  
 
-Replace all instances in the MR BIOS generic 286 image of
-E6 EB (14 found)
-and
-E7 EB (392 found)
-with
-E6 ED (14)
-and
-E7 ED (392)
-This update will only make use of ports ED and EE for dummy writes.
+Replace all instances in the MR BIOS generic 286 image of  
+E6 EB (14 found)  
+and  
+E7 EB (392 found)  
+with  
+E6 ED (14)  
+and  
+E7 ED (392)  
+This update will only make use of ports ED and EE for dummy writes.  
 Nothing should be present on these ports which belong to the X-DATA bus IO space(000-0FFh) on the mainboard only.
 
-A compiled version of XT-IDE universal BIOS is included in the CPLD archive, look for the file marked "RealDOOM_edition".
-For information about sqpats amazing RealDOOM project, go to his GitHub for the latest releases!
+A compiled version of XT-IDE universal BIOS is included in the CPLD archive, look for the file marked "RealDOOM_edition".  
+
+For information about sqpats amazing RealDOOM project, go to his GitHub for the latest releases!  
+
 https://github.com/sqpat/RealDOOM
 
 Kind regards,
