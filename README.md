@@ -114,7 +114,13 @@ The system operates best at 22.4MHz using the dual clock projects, or at 16MHz s
 When a more completely stable and glitch free experience is preferable instead of maximum performance, it is recommended to clock the system at 20MHz CPU clock (40MHz oscillator for FCLOCK)
 Otherwise around 22.4MHz will get the most out of the current V004 CPLD logic.
 
-# Status update 8-11-2025:
+# Status update 8-11-2025:  
+
+![Full RealDOOM support](Img_6822.jpg)  
+
+![Full RealDOOM support](Img_6828.jpg)  
+
+
 # Full RealDOOM supporting EMS system design established and operational at 22MHz
 The logic for supporting EMS memory according to drivers by sqpat, see the VCF thread, has been added to the quartus designs.  
 Operation of EMS has been debugged completely and now working.
