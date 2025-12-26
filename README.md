@@ -161,6 +161,30 @@ For information about sqpats amazing RealDOOM project, go to his GitHub for the 
 
 https://github.com/sqpat/RealDOOM
 
+# Update: more work done on CPLD logic
+
+I have done extensive development and testing to attempt to further update and improve the CPLD programming.
+In the course of this work I discovered some issues with DMA transfers from memory to IO.
+I have updated the DMA wait state logic and changed the DMA READY timing.
+Also I have changed the DMA arbitration timing to shorten the time between bus requests and handover mechanism.
+
+Another big update is that I have updated all the address bus logic to operate with edge triggered registers rather than load type latches.
+This includes the DMA mid address latches.
+
+I have updated the address bus logic where the bus for memory decoders is separate and integrated with the bus master logic on the ISA slot.
+The VGA RAM region decoder logic for directing cycle control during VGA related cycles has been updated to be only controlled by the 286 CPU and not any other address bus sources in order to speed up the critical timing for decoding these cycles.
+
+All this work has resulted in a (so far) most ideal bus timing where the VGA cycles are fully stabilized at 22.4 MHz clock speed.
+The DMA transfers from IO to memory are flawless, however with the DMA transfers from memory to IO there are still some data errors occurring.
+However these errors are not always apparent, for example when using a disk imaging program to write a floppy disk, this is apparently error free.
+These disks can be normally booted from and read etc.
+
+It is recommended to use the latest developed package dated dec 2025:
+REV_3D_CPLD_RealDOOM_EMS_SUPPORT_22.4_MHZ_QUARTUS_PROJECTS_V005_DEC2025.zip
+Which includes these latest updates.
+
 Kind regards,
 
 Rodney
+
+Last updated 25th dec, 2025.
