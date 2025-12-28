@@ -161,7 +161,7 @@ For information about sqpats amazing RealDOOM project, go to his GitHub for the 
 
 https://github.com/sqpat/RealDOOM
 
-# Update: more work done on CPLD logic
+# Update 005: more work done on CPLD logic
 
 I have done extensive development and testing to attempt to further update and improve the CPLD programming.
 In the course of this work I discovered some issues with DMA transfers from memory to IO.
@@ -183,8 +183,24 @@ It is recommended to use the latest developed package dated dec 2025:
 REV_3D_CPLD_RealDOOM_EMS_SUPPORT_22.4_MHZ_QUARTUS_PROJECTS_V005_DEC2025.zip
 Which includes these latest updates.
 
+# Update 006: Additional stable updates
+
+After more testing and working on the FPGA iteration of the project I decided to have another try to compile the DMA IO commands in a multiplexed form of merged 286/DMAC IO command outputs in the System controller CPLD.
+Previously I was not able to get the circuits as correctly reflected to compile in stable form. This time I was successful to get the logic to compile in the right way to result in a fully functional System controller which functions equally stable as when this modification was previously done by quartus however not transparently visible in the technology map.
+
+Now the compilation result includes the IO command signals as joined structures to the common IO command output pins, which more closely resembles the fully integrated versions of the IO commands I plan to test with initially in the FPGA system.
+
+The IO decoder has been slightly updated to conform more with the FDC datasheet info where in certain IO ports these are masked by the FDC for writes to be allowed only when SA0=1.
+
+I have tried to modify the U87 byte conversion / DMA data path equations but so far this has thrown off the compilation result so these intended updates regarding the DMA data path decoding have not been able to compile in a stable functional form yet. I will make further attempts to get these compiled in, to possibly further simplify the DMA data path mechanisms for DMAC-1 when it operates on the high data byte of system RAM.
+
+This latest file set is uploaded in:
+REV_3D_CPLD_RealDOOM_EMS_SUPPORT_22.4_MHZ_QUARTUS_PROJECTS_V006_DEC2025.zip
+Again this update is now recommended as it represents my latest stable and fully tested set of quartus projects.
+I have recompiled and verified all of these projects against my stable running system and they all checked out to match the current programming.
+
 Kind regards,
 
 Rodney
 
-Last updated 25th dec, 2025.
+Last updated 28th dec, 2025.
