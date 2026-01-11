@@ -210,6 +210,7 @@ Also some minor logic improvements have been included in this update.
 
 Filename: 
 https://github.com/rodneyknaap/ATX-286AT-V3-mainboard/blob/main/REV_3D_CPLD_RealDOOM_EMS_SUPPORT_22.4_MHZ_QUARTUS_PROJECTS_V007_JAN2026.zip
+The file can be downloaded by clicking on the link and then choosing raw file download to save it.
 
 Kind regards,
 
