@@ -202,10 +202,12 @@ I have recompiled and verified all of these projects against my stable running s
 # Update 007: DMA issues fixed
 
 Some minor DMA issues existed which are now also fixed.
-This further improved the sound quality in RealDOOM for versions where the SFX are currently working.
-The best RealDOOM sound support version was from 17 nov 2025.
+This further improved the sound quality in RealDOOM for versions where the SFX are currently working.  
+
+The best RealDOOM sound support version was from 17 nov 2025, RealDOOM is currently under heavy development so this first must run it's course in Patricks work.
 
 Also some minor logic improvements have been included in this update.
+
 Filename: 
 REV_3D_CPLD_RealDOOM_EMS_SUPPORT_22.4_MHZ_QUARTUS_PROJECTS_V007_JAN2026.zip
 
