@@ -199,8 +199,18 @@ REV_3D_CPLD_RealDOOM_EMS_SUPPORT_22.4_MHZ_QUARTUS_PROJECTS_V006_DEC2025.zip
 Again this update is now recommended as it represents my latest stable and fully tested set of quartus projects.
 I have recompiled and verified all of these projects against my stable running system and they all checked out to match the current programming.
 
+# Update 007: DMA issues fixed
+
+Some minor DMA issues existed which are now also fixed.
+This further improved the sound quality in RealDOOM for versions where the SFX are currently working.
+The best RealDOOM sound support version was from 17 nov 2025.
+
+Also some minor logic improvements have been included in this update.
+Filename: 
+REV_3D_CPLD_RealDOOM_EMS_SUPPORT_22.4_MHZ_QUARTUS_PROJECTS_V007_JAN2026.zip
+
 Kind regards,
 
 Rodney
 
-Last updated 28th dec, 2025.
+Last updated jan 11th, 2026.
