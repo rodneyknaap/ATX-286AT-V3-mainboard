@@ -61,9 +61,10 @@ The System controller also contains cycle control logic which switches the 286 o
 The Address driver/decoder CPLD in addition contains DMA specific logic in order not only to generate the system address bus from the CPU but also from the DMACs and a bus Master if present on the slot connector. The Address driver/decoder is also decoding all XMS and EMS memory in the system. For this purpose the Address driver/decoder communicates with the EMS controller in order to determine the selection of XMS or EMS memory for each area of system memory. By default, each page block of system memory is initially programmed to be a default page which is located in the XMS memory chips. When a certain block is reprogrammed in the EMS page registers, it will be remapped into any programmable block inside the EMS memory pool. By programming a memory block back to default, the original memory contents are mapped back into that 16KB page block.
 
 # Status of the project  
-Currently the project is fully prepared in the quartus CPLD programming, which have been uploaded here into this repository.  
+Check at the bottom for the latest news of the fully tested system at 22.4MHz.
 
-The PCBs have been ordered from JLCPCB (3-8-2025)  
+
+The PCBs were ordered from JLCPCB (3-8-2025)
 
 ![A picture of JLCPCB Order view](JLCPCB_ORDER_REV3D.png)  
 
