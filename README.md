@@ -213,6 +213,8 @@ Filename:
 https://github.com/rodneyknaap/ATX-286AT-V3-mainboard/blob/main/REV_3D_CPLD_RealDOOM_EMS_SUPPORT_22.4_MHZ_QUARTUS_PROJECTS_V007_JAN2026.zip
 The file can be downloaded by clicking on the link and then choosing raw file download to save it.
 
+![REV3D system built into PC case](REV3D_mainboard_mounted_in_PC_case.jpg)  
+
 Kind regards,
 
 Rodney
