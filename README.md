@@ -228,8 +228,7 @@ The file can be downloaded by clicking on the link and then choosing raw file do
 - the direct data bus option jumpers are not used so can be left out
 - the printer port is correctly detected by MR BIOS however not yet actually tested, check the pinouts for making a cable and bracket for it. The port is split differently from my previous designs using an LPT and was purely added because of having so many pins available on the IO decoder CPLD so to put these to use.
 - Atmel/microchip CPLDs need the quartus POF programming file to be converted by Pof to Jed conversion utility 4.45 to a JED file which then can be programmed with the ATMISP 7.3 using a Atmel/microchip compatible USB programmer. Conversion options to enable: TDI_PULLUP, TMS_PULLUP, Reduce MC Power = Off, Open collector = auto, JTAG mode = On, Slew rate = Fast. ALTERA CPLDs need quartus programmer tool to program them, always reselect the programming file and ensure the right file date, program and verify. If the meter is green, that should mean it's fully verified.
-- build this at your own responsibility and risk (I keep reminding people, you must estimate your own ability to complete this project from all the elaborate details shared here)
-
+- build and use this at your own responsibility and risk, (I keep reminding people, you must estimate your own ability to complete this project from all the elaborate details shared here) nothing is quaranteed, I merely have shared everything here that I have developed and used to reach my fully functional system.
 
 Kind regards,
 
