@@ -215,8 +215,22 @@ The file can be downloaded by clicking on the link and then choosing raw file do
 
 ![REV3D system built into PC case](REV3D_mainboard_mounted_in_PC_case.jpg)  
 
+## A few more details for potential builders:
+- CPLDs are: 'ATF1508AS 10AI100' and 'EPM7256SQC208-10N' and it's highly recommended to also use these exact types and ratings
+- clock oscillator should be a 44.8MHz one to replicate the clock timing of my fully functional build
+- 286 CPU is recommended a Harris 20MHz rated one made around 06-1992. These earlier ones are the best and mine was verified up to 32MHz by sqpat.
+- Quartus 13.0 SP1 must be used or it won't support the CPLDs
+- there are no wires necessary between the SPn pads even though some may appear in photos those are just for experimental purposes and I have removed them since.
+- the transceiver next to the IO decoder needs to be bridged with wires, check schematic for inputs and corresponding output pins
+- soldering the memory modules is best done with solid core component pin wires or at least some type of solid core tinned wire. The wires can be run to both sides of the module and bent down from both sides to meet the holes of the modules. A sufficiently powerful soldering iron with thick wedge tip to conduct heat well and leaded solder should be capable of soldering the wires. Some thick type of paper strips are recommended to separate the soldered ends sticking out on the module to short with the other row bent down across them. Clipping off those ends neatly so they don't stick out far is also recommended but caution must be observed to not damage anything.
+- while programming the CPLDs for the first time I suggest not leaving the system powered up any longer than necessary for the programming sequence, and keeping a jumper on the RESET header until all the programming is done, to make sure the 286 will not be trying to run the system prematurely.
+- the two 16 bit ROM sockets are not needed, the 8 bit mode ROM is recommended and featured in the quartus versions
+- the direct data bus option jumpers are not used so can be left out
+- the printer port is correctly detected by MR BIOS however not yet actually tested, check the pinouts for making a cable and bracket for it. The port is split differently from my previous designs using an LPT and was purely added because of having so many pins available on the IO decoder CPLD so to put these to use.
+- build this at your own responsibility and risk (I keep reminding people, you must estimate your own ability to complete this project from all the elaborate details shared here)
+
 Kind regards,
 
 Rodney
 
-Last updated jan 11th, 2026.
+Last updated march 20th, 2026.
